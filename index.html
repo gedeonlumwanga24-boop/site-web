@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - Mon site web</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <!-- MENU HAMBURGER -->
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <button id="theme-toggle" class="theme-btn">
+        <span class="icon">🌙</span>
+      </button>
+    </ul>
+  </nav>
+
+  <!-- MENU -->
+  <header class="navbar">
+    <div class="logo">
+      <img
+        src="logo-kaluge4.jpg"
+        alt="Kaluge"
+        style="width: 110px; height: 80px; filter: brightness(150%)"
+      />
+    </div>
+    <nav class="menu">
+      <a href="index.html"><b>Accueil</b></a>
+      <a href="apropos.html"><b>À propos</b></a>
+      <a href="projets.html"><b>projets</b></a>
+      <a href="contact.html"><b>Contact</b></a>
+    </nav>
+  </header>
+
+  <body>
+    <!-- SECTION D'ACCUEIL -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Bienvenue sur mon site web 🌍</h1>
+        <p>
+          Je suis Gédéon, un jeune développeur web passionné qui apprend à créer
+          des sites modernes et créatifs.
+        </p>
+        <a href="apropos.html" class="btn">En savoir plus</a>
+      </div>
+    </header>
+
+    <!-- EFFET IMAGE -->
+    <div class="carousel-container">
+      <h2 class="title">Nos services</h2>
+
+      <div class="carousel">
+        <div class="card">
+          <img src="site-moderne1.jpg" />
+          <h3>site-web</h3>
+        </div>
+        <div class="card">
+          <img src="portfolio.jpg" />
+          <h3>site-web</h3>
+        </div>
+        <div class="card">
+          <img src="logo-kaluge2.jpg" />
+          <h3>KalugeCode</h3>
+        </div>
+        <div class="card">
+          <img src="image4.jpg" />
+          <h3>portfolio moderne</h3>
+        </div>
+        <div class="card">
+          <img src="image5.png" />
+          <h3>Portfolio moderne</h3>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button id="prevBtn">←</button>
+        <div class="dots"></div>
+        <button id="nextBtn">→</button>
+      </div>
+    </div>
+
+<!-- Pied de page -->
+
+  <footer class="footer-dark">
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <div class="newsletter-left">
+        <div class="logo">KLG</div>
+        <div>
+          <h3>Newsletter</h3>
+          <p>Nous suivre pour ne rien rater (Services, tutos, projets, actus tech)</p>
+        </div>
+      </div>
+      <a href="contact.html"><button class="newsletter-btn">+ Nous suivre</button></a>
+    </div>
+
+    <!-- CONTENU -->
+    <div class="footer-content">
+      <div class="footer-block">
+        <h4>Adresse</h4>
+        <p>République Démocratique du Congo</p>
+        <p>En ligne – Informatique & Web</p>
+
+        <h4 class="mt">Contact</h4>
+        <p class="highlight">gedeonlumwanga24@gmail.com</p>
+      </div>
+
+      <div class="footer-block">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Tutoriels</a></li>
+          <li><a href="contact.html">Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Conditions d’utilisation</a></li>
+          <li><a href="#">Protection des données</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Cookies</a></li>         
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">
+      © 2025 — Gédéon | développeur Web en apprentissage
+    </p>
+  </footer>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- LIEN JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

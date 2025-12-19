@@ -1,0 +1,279 @@
+/* ------------------- */
+/* HAMBURGER BUTTON */
+/* ------------------- */
+
+/* COPYRIGHT */
+.head-copy {
+text-align: left;
+color: hsl(2, 100%, 44%);
+}
+
+.menu-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-btn span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Animation vers croix */
+.menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+/* ------------------- */
+/* MENU PANEL */
+/* ------------------- */
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -320%;
+    width: 250px;
+    height: 50vh;
+    background:  linear-gradient(180deg, #0b0f1a, #0e1627);
+    transition: right 0.55s cubic-bezier(0, 22, 1, 0, 36, 1), box-shodow 0.55s
+    cubic-bezier(0.22, 1, 0. 36, 1);
+    box-shadow: -10px 0 30 px rgb(0, 0, 0, 0, 35);
+    z-index: 999;
+    padding-top: 50px;
+}
+
+.menu ul li {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+
+.menu.active {
+    right: 0;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 25px 0;
+        animation: linkIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(0.08s * var(--i));
+}
+
+@keyframes linkIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #ff7a00;
+    transform: scale(1.05);
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.contact h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 35px 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card i {
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+}
+
+.card span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Couleurs par réseau */
+.whatsapp i { color: #25D366; }
+.facebook i { color: #1877F2; }
+.instagram i { color: #E4405F; }
+.telegram i { color: #229ED9; }
+
+
+/* FORM RIGHT */
+.contact-form {
+  background: #0b1b25;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: transparent;
+  border: 2px solid #333;
+  color: #ffffff;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #2074b9;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================
+   MODE CLAIR (par défaut)
+===================== */
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --primary-color: #2563eb;
+  --border-color: #e5e7eb;
+}
+
+/* =====================
+   MODE SOMBRE
+===================== */
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
+  --primary-color: #38bdf8;
+  --border-color: #334155;
+}
+
+/* =====================
+   APPLICATION GLOBALE
+===================== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+a {
+  color: var(--primary-color);
+}

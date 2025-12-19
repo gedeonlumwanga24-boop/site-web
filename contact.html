@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <!-- Lien vers le CSS -->
+  <link rel="stylesheet" href="contact.css">
+  </head>
+
+  <!-- MENU HAMBURGER -->
+    <div class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault(); // empêche le rechargement
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const phoneNumber = "243970297987"; // 🔴 METS TON NUMÉRO ICI
+
+  const text = 
+    "📩 Nouveau message depuis le site%0A%0A" +
+    "👤 Nom : " + name + "%0A" +
+    "📧 Email : " + email + "%0A%0A" +
+    "💬 Message : %0A" + message;
+
+  const url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+<body>
+<section class="contact">
+    <h1>Contactez-moi</h1>
+    <p class="subtitle">Disponible sur plusieurs plateformes</p>
+
+    <div class="contact-grid">
+
+        <a href="mailto:contact@email.com" class="card">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+        </a>
+
+        <a href="https://wa.me/243000000000" class="card whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a href="#" class="card facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+
+        <a href="#" class="card instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a href="#" class="card telegram">
+            <i class="fa-brands fa-telegram"></i>
+            <span>Télégramme</span>
+        </a>
+
+    </div>
+</section>
+
+
+  <!-- FORMULAIRE -->
+  <div class="contact-form">
+    <h2>Nous contacter</h2>
+
+<form class="contact-form" onsubmit="sendWhatsApp(event)">
+  <input type="text" id="name" placeholder="Votre nom" required>
+
+  <input type="email" id="email" placeholder="Adresse e-mail valide" required>
+
+  <textarea id="message" placeholder="Votre message" required></textarea>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+  </div>
+
+</section>
+
+</body>
+<script src="nouv.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</html>
