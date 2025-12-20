@@ -48,7 +48,7 @@ color: hsl(2, 100%, 44%);
     right: -320%;
     width: 250px;
     height: 50vh;
-    background:  linear-gradient(180deg, #06080c, #0a191f);
+    background:  linear-gradient(180deg, #0b0f1a, #0e1627);
     transition: right 0.55s cubic-bezier(0, 22, 1, 0, 36, 1), box-shodow 0.55s
     cubic-bezier(0.22, 1, 0. 36, 1);
     box-shadow: -10px 0 30 px rgb(0, 0, 0, 0, 35);
@@ -100,12 +100,15 @@ color: hsl(2, 100%, 44%);
     transform: scale(1.05);
 }
 
+
 /* VAVIGATION DE L'EN-TETE */
+
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background:black
+  background-color: black;
 }
 
 .logo {
@@ -114,22 +117,27 @@ color: hsl(2, 100%, 44%);
   color: #007ca5; /* Bleu personnalisable */
 }
 
+
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
-    background: linear-gradient(135deg, #0f2027, #152929, #2c5364);
-    color: white;
+    background: linear-gradient(135deg, #0f2027, #152929, #2c5364);	
+    color: #eaeaea;
     font-family: 'Times New Roman', Times, serif
+    line-height: 1.6;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 40px 0px 60px;
+    padding: 100px 20px 60px;
 }
 
 .hero h1 {
@@ -139,31 +147,45 @@ body {
 
 .hero p {
     max-width: 700px;
-    margin: 5px auto;
-    color: white;
+    margin: 20px auto;
+    color: #bbb;
     font-size: 18px;
 }
 
-/* PROJETS */
+/* SECTION PROJETS */
 .projets {
-    padding: 10px 6%;
+    padding: 60px 8%;
 }
 
+/* CARTE PROJET */
 .projet {
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
+/* INVERSION DES PROJETS */
 .projet.reverse {
     flex-direction: row-reverse;
 }
 
+/* IMAGE PROJET */
+.projet-img {
+    flex: 1;
+}
+
 .projet-img img {
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* CONTENU */
+.projet-content {
+    flex: 1;
 }
 
 .projet-content h2 {
@@ -172,14 +194,19 @@ body {
 }
 
 .desc {
-    color: #ffffff;
+    color: #ccc;
     margin-bottom: 20px;
 }
 
-/* TAGS */
+/* TAGS TECHNO */
+.tags {
+    margin-bottom: 20px;
+}
+
 .tags span {
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 8px;
     padding: 6px 14px;
     background: #111;
     border: 1px solid #333;
@@ -188,9 +215,9 @@ body {
     color: #4cc9f0;
 }
 
-/* ACTIONS */
+/* BOUTONS */
 .actions {
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -200,7 +227,7 @@ body {
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -208,24 +235,95 @@ body {
     color: #fff;
 }
 
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    font-size: 14px;
+}
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+/* ===================== */
+/* RESPONSIVE TABLETTE */
+/* ===================== */
+@media (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .projet {
+        gap: 30px;
+    }
+
+    .projet-content h2 {
+        font-size: 24px;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .projets {
+        padding: 40px 5%;
+    }
+
     .projet,
     .projet.reverse {
         flex-direction: column;
         text-align: center;
+        margin-bottom: 60px;
     }
 
     .projet-img img {
-        width: 100%;
-        max-width: 400px;
+        max-width: 100%;
+    }
+
+    .projet-content h2 {
+        font-size: 22px;
+    }
+
+    .tags span {
+        margin-right: 6px;
     }
 }
+
+/* ===================== */
+/* TRÈS PETITS ÉCRANS */
+/* ===================== */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+}
+
 .footer-dark {
   background: #0a0a0a;
   padding: 60px 20px 30px;
-  color: #e5e5e5;
 }
 
 /* NEWSLETTER */
