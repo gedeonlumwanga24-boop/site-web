@@ -48,7 +48,7 @@ color: hsl(2, 100%, 44%);
     right: -320%;
     width: 250px;
     height: 50vh;
-    background:  linear-gradient(180deg, #0b0f1a, #0e1627);
+    background: linear-gradient(180deg, #0b0f1a, #0e1627);
     transition: right 0.55s cubic-bezier(0, 22, 1, 0, 36, 1), box-shodow 0.55s
     cubic-bezier(0.22, 1, 0. 36, 1);
     box-shadow: -10px 0 30 px rgb(0, 0, 0, 0, 35);
@@ -128,7 +128,7 @@ color: hsl(2, 100%, 44%);
 
 /* BASE */
 body {
-    background: linear-gradient(135deg, #0f2027, #152929, #2c5364);	
+    background: linear-gradient(135deg, #0f2027, #152929, #2c5364);;	
     color: #eaeaea;
     font-family: 'Times New Roman', Times, serif
     line-height: 1.6;
@@ -148,7 +148,7 @@ body {
 .hero p {
     max-width: 700px;
     margin: 20px auto;
-    color: #bbb;
+    color: white;
     font-size: 18px;
 }
 
@@ -177,7 +177,7 @@ body {
 
 .projet-img img {
     width: 100%;
-    max-width: 380px;
+    max-width: 450px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -194,7 +194,7 @@ body {
 }
 
 .desc {
-    color: #ccc;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -231,7 +231,7 @@ body {
 }
 
 .btn:hover {
-    background: #e63946;
+    background: #086e72;
     color: #fff;
 }
 
@@ -239,7 +239,7 @@ body {
 .footer {
     text-align: center;
     padding: 40px;
-    color: #888;
+    color: white;
     font-size: 14px;
 }
 
@@ -364,7 +364,7 @@ body {
 
 .footer-newsletter p {
   font-size: 13px;
-  color: #aaa;
+  color: white;
 }
 
 .newsletter-btn {
