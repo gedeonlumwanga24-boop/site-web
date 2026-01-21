@@ -46,8 +46,8 @@ color: hsl(2, 100%, 44%);
     position: fixed;
     top: 0;
     right: -320%;
-    width: 250px;
-    height: 50vh;
+    width: 230px;
+    height: 55vh;
     background:  linear-gradient(180deg, #0b0f1a, #0e1627);
     transition: right 0.55s cubic-bezier(0, 22, 1, 0, 36, 1), box-shodow 0.55s
     cubic-bezier(0.22, 1, 0. 36, 1);
@@ -480,4 +480,3 @@ body {
 a {
   color: var(--primary-color);
 }
-
