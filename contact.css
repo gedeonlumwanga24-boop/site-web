@@ -186,7 +186,7 @@ body {
 /* FORM RIGHT */
 .contact-form {
   background: #0b1b25;
-  padding: 40px;
+  padding: 30px;
   border-radius: 6px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
@@ -199,7 +199,7 @@ body {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   border: none;
   border-radius: 4px;
   margin-bottom: 15px;
@@ -237,93 +237,3 @@ body {
   }
 }
 
-
-/* =====================
-   MODE CLAIR (par défaut)
-===================== */
-:root {
-  --bg-color: #f9fafb;
-  --text-color: #000000;
-  --card-bg: #ffffff;
-  --primary-color: #2563eb;
-  --border-color: #e5e7eb;
-}
-
-/* =====================
-   MODE SOMBRE
-===================== */
-[data-theme="dark"] {
-  --bg-color: #000000;
-  --text-color: #e5e7eb;
-  --card-bg: #1e293b;
-  --primary-color: #38bdf8;
-  --border-color: #334155;
-}
-
-/* =====================
-   APPLICATION GLOBALE
-===================== */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-}
-
-a {
-  color: var(--primary-color);
-
-}
-
-
-/* ===============================
-   FORCE MODE UNIQUE (NO DARK/LIGHT)
-================================ */
-
-/* Ignore le thème système */
-@media (prefers-color-scheme: dark),
-       (prefers-color-scheme: light) {
-
-  html, body {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-  }
-
-  /* Textes */
-  h1, h2, h3, p, span, a, label {
-    color: #111111 !important;
-  }
-
-  /* Cartes */
-  .card {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-  }
-
-  /* Formulaire */
-  input,
-  textarea {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-    border: 1px solid #ccc !important;
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: #777 !important;
-  }
-
-  button {
-    background-color: #111111 !important;
-    color: #ffffff !important;
-  }
-
-  nav,
-  .menu {
-    background-color: #ffffff !important;
-  }
-}
