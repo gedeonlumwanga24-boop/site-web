@@ -70,7 +70,7 @@
 }
 
 .menu ul li {
-    margin: 25px 0;
+    margin: 20px 0;
         animation: linkIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: calc(0.08s * var(--i));
 }
@@ -106,7 +106,6 @@
 
 body {
     font-family: 'Arial Narrow', Arial, sans-serif
-    line-height: 1.6;
 }
 
 /* ------------------- */
@@ -397,21 +396,6 @@ body {
 .footer-newsletter p {
   font-size: 13px;
   color: #aaa;
-}
-
-.newsletter-btn {
-  background: #e10600;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.newsletter-btn:hover {
-  transform: scale(1.05);
 }
 
 /* CONTENU */
