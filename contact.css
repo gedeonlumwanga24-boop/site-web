@@ -276,4 +276,54 @@ body {
 
 a {
   color: var(--primary-color);
+
+}
+
+
+/* ===============================
+   FORCE MODE UNIQUE (NO DARK/LIGHT)
+================================ */
+
+/* Ignore le thème système */
+@media (prefers-color-scheme: dark),
+       (prefers-color-scheme: light) {
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Textes */
+  h1, h2, h3, p, span, a, label {
+    color: #111111 !important;
+  }
+
+  /* Cartes */
+  .card {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Formulaire */
+  input,
+  textarea {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    border: 1px solid #ccc !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #777 !important;
+  }
+
+  button {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+  }
+
+  nav,
+  .menu {
+    background-color: #ffffff !important;
+  }
 }
